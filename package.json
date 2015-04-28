@@ -12,7 +12,7 @@
     "url": "https://github.com/ordergroove/misc"
   },
   "scripts": {
-    "test": "gulp tests"
+    "test": "gulp test"
   },
   "devDependencies": {
     "gulp": "3.8.11",
