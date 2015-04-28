@@ -31,5 +31,16 @@
     "gulp-jshint": "~1.10.0",
     "jshint-stylish": "~1.0.1",
     "gulp-jscs": "~1.6.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ordergroove/misc/issues"
+  },
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "readmeFilename": "README.md",
+  "keywords": [
+    "utility"
+  ]
 }
