@@ -31,8 +31,6 @@
         "define": true,
         "module": true,
         "spyOn": true,
-        "require": true,
-        "setTimeout": true,
-        "clearTimeout": true
+        "require": true
     }
 }

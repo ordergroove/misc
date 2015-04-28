@@ -13,7 +13,7 @@
         del = require('del'),
         pkg = require('./package.json');
 
-    var banner = '// ' + pkg.name + ' - v' + pkg.version + ' - License ' + pkg.license +
+    var banner = '// ' + pkg.name + ' - v' + pkg.version + ' - ' + pkg.license + ' License'
             '\n// ' +  pkg.copyright + ' (c) ' + pkg.author + '\n\n';
 
     // paths
