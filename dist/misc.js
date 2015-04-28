@@ -1,4 +1,4 @@
-// misc - v1.0.0 - MIT License
+// misc - v1.0.1 - MIT License
 // 2015 (c) OrderGroove Developers
 
 (function() {

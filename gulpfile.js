@@ -20,7 +20,7 @@
     var paths = {
         src: './src/' + pkg.name + '.js',
         spec: './test/' + pkg.name + '.spec.js',
-        output: './dist'
+        output: './dist/'
     };
 
     gulp.task('hint', function() {
@@ -43,12 +43,10 @@
             .pipe(karma({configFile: 'test/karma.conf.js'}));
     });
 
-    gulp.task('clean', [ 'test' ], function() {
+    gulp.task('build', [ 'test' ], function() {
         // test and delete browserified spec file
         del('./temp_spec.js');
-    });
 
-    gulp.task('build', [ 'clean' ], function() {
         return gulp.src(paths.src)
             .pipe(concat.header(banner))
             .pipe(gulp.dest(paths.output))
