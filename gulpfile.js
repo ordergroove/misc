@@ -6,6 +6,7 @@
         concat = require('gulp-concat-util'),
         karma = require('gulp-karma'),
         jshint = require('gulp-jshint'),
+        jscs = require('gulp-jscs'),
         uglify = require('gulp-uglify'),
         browserify = require('browserify'),
         source = require('vinyl-source-stream'),
@@ -24,6 +25,7 @@
 
     gulp.task('hint', function() {
         return gulp.src([ paths.src, paths.spec ])
+            .pipe(jscs())
             .pipe(jshint())
             .pipe(jshint.reporter('jshint-stylish'))
             .pipe(jshint.reporter('fail'));
@@ -41,10 +43,12 @@
             .pipe(karma({configFile: 'test/karma.conf.js'}));
     });
 
-    gulp.task('build', [ 'test' ], function() {
-        // clean browserified spec file
+    gulp.task('clean', [ 'test' ], function() {
+        // test and delete browserified spec file
         del('./temp_spec.js');
+    });
 
+    gulp.task('build', [ 'clean' ], function() {
         return gulp.src(paths.src)
             .pipe(concat.header(banner))
             .pipe(gulp.dest(paths.output))

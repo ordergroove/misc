@@ -255,7 +255,7 @@
      * @returns {boolean}
      */
     _.contains = function(arr, searchElement, fromIndex) {
-        return !!~_.indexOf(arr, searchElement, fromIndex);
+        return _.indexOf(arr, searchElement, fromIndex) !== -1;
     };
 
     /***

@@ -405,7 +405,7 @@
                 });
             });
             describe('multiple debounce', function() {
-                var temp = {
+                var a, temp = {
                     func: function() {
                         return true;
                     }
